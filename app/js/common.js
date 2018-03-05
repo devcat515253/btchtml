@@ -1,6 +1,17 @@
 $(function() {
 
-   
+
+
+    $(".share .share__content .ic").click(function (e) {
+        e.preventDefault();
+        $(this).addClass('cbutton--click').delay(1000).queue(function(next){
+            $(this).removeClass('cbutton--click');
+            window.location = $(this).attr('href'); // переход по ссылке по атрибуту href
+            next();
+        });
+    });
+
+    // 4. Пишем скрипт который создаст и отобразит карту Google Maps на странице.
 
 	try{
 
@@ -28,11 +39,11 @@ var map;
 		var _this = $(this);
 
 		if (_this.hasClass("is-opened")) {
-			_this.removeClass("is-opened").next(".tr-content").hide(); 
+			_this.removeClass("is-opened").next(".tr-content").hide();
 		}else{
 			$(".hard-table .tr-default").removeClass("is-opened");
 			$(".hard-table .tr-content").hide();
-			_this.addClass("is-opened").next(".tr-content").show(); 
+			_this.addClass("is-opened").next(".tr-content").show();
 		}
 	});
 
@@ -201,7 +212,12 @@ var map;
 
 	
 
-
+	//SVG Fallback
+	if(!Modernizr.svg) {
+		$("img[src*='svg']").attr("src", function() {
+			return $(this).attr("src").replace(".svg", ".png");
+		});
+	};
 
 	/*
  * Replace all SVG images with inline SVG
@@ -239,5 +255,6 @@ var map;
     }, 'xml');
 
  });
+
 
 });

@@ -188,6 +188,12 @@ img
 		background-size: 26px 26px
 		height: 26px
 		width: 26px
+	&-card
+		background:  url(../img/card-icon.png) no-repeat center
+		height: 100px
+		width: 100px
+		background-size: contain
+		display: inline-block
 
 .circle
 	display: inline-block
@@ -2138,6 +2144,7 @@ hr
 				margin-left: 1rem
 				margin-bottom: .5rem
 				transition: all .2s linear
+				flex-shrink: 0
 		.opened
 			&:after
 				transform: rotate(135deg)
@@ -2169,7 +2176,7 @@ hr
 
 
 
-
+@import "prepaid_card"
 @import "contacts"
 @import "discount"
 @import "popup_and_hamburger"
