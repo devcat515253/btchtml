@@ -91,22 +91,22 @@
 	.transcations-status
 		top: -5.5rem;
 		left: 11rem;
-	.transcations .content
-		padding-top: 10rem
+	.transcations-process
+		margin-top: 5rem
 @media only screen and (max-width : 1100px)
 	.inner .main__wrapper
 		.navbars
 			margin-left: 1rem
-		.navbars-nav
 			width: 230px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	.mobile-only
+		display: block !important
+	.header
+		z-index: 100
 	//triangls
 	.exchange .process-wr:after , .exchange .process-wr:before
 		display: none
-		//border: 1px solid #b7bece
-		//width: 30px
-		//height: 30px
 	.exchange .process-wr
 		border-left: none
 		border-right: none
@@ -119,18 +119,22 @@
 		left: -13px
 	.exchange .process:after
 		right: 8px
-
-
-
+	.transcations-process
+		margin-top: 2rem
 	.inner .main__wrapper .navbars
 		display: none
 	.inner
+		
 		.main__wrapper
 			flex-wrap: wrap
 		&:after
 			height: 240px
+
 		.navbars
 			margin-top: 7rem
+	.main.inner-large
+		&:after
+			height: 480px
 	.exchange
 		flex-wrap: wrap
 	.container
@@ -261,7 +265,8 @@
 	body
 		&.menu-mobile__opened
 			position: relative
-			.page__footer, .header-btn, .header-logo, .header:after
+			.page__footer, .header-btn, .header-logo, .header:after,
+			.page__content, .page__footer
 				filter: blur(2px)
 			.header-menu
 				display: block
@@ -408,8 +413,33 @@
 		margin: 0 1.5rem
 	.transcations-process .step-info
 		margin-top: 0
-	.transcations .content
-		padding-top: 8rem
+	.hard-table.hz-scroll
+		width: 100%
+		overflow-x: auto;
+		overflow-y: hidden;
+		table
+			width: 1160px
+	.gratitude .img-left
+		position: absolute
+		top: -6rem
+		left: 10rem
+		width: 7.4rem
+		height: 7.4rem
+	.gratitude .img-right
+		position: absolute
+		top: -6rem
+		right: 10rem
+		width: 7.5rem
+	.gratitude
+		margin-top: 8rem
+	.discounts .main__wrapper .content
+		margin-bottom: 7rem
+	.discounts .content__header .sub-title
+		margin-bottom: 4rem
+	.settings-tip
+		max-width: 100%
+		margin-left: 0
+		margin-top: 5px
 @media only screen and (max-width : 991px) and (min-width : 640px)
 	.switch-btn
 		margin: 2.5rem auto 2rem
@@ -495,6 +525,8 @@
 		text-align: center
 		.btn
 			margin-top: 3.6rem
+	.contact-page .content__header .sub-title
+		margin-bottom: 5rem
 @media only screen and (max-width : 639px)
 	html
 		font-size: 10px
@@ -560,9 +592,21 @@
 			padding: 0
 		.header-btn
 			filter: blur(0px)
-			display: block
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			width: 100%
 			text-align: center
 			margin: 1rem auto 0
+			.dropdown-data
+				right: 0
+				left: auto
+				transform: none
+				&:after
+					left: 83%
 	.settings .blank-self .list-numeric .desktop-only
 		display: none
 	.settings .blank-self .list-numeric .mobile-only
@@ -617,7 +661,7 @@
 		table
 			width: 135%
 	.settings .hz-scroll table
-		width: 180%
+		width: 670px
 	.invite .col:first-child
 		border-bottom: 1px solid $borderGrey
 		padding-bottom: 4.2rem
@@ -631,7 +675,7 @@
 	.settings .form:last-child
 		margin-bottom: 0
 	.transcations-process
-		padding-top: 5.6rem
+		padding-top: 1.5rem
 		.input-exchange .input
 			border: none
 			padding: 0
@@ -681,8 +725,30 @@
 		padding-top: 0
 	.transcations-info .line-sides
 		margin-bottom: 2.5rem
-	.transcations .content
-		padding-top: 4rem
+	.gratitude
+		.h2 
+			white-space: normal
+			font-size: 1.8rem
+		hr
+			margin: 3.2rem auto
+	.gratitude .img-right
+		width: 6.4rem
+		right: 0
+		top: -5rem
+	.gratitude .img-left
+		width: 6.4rem
+		left: 0
+		top: -4rem
+		height: auto
+	.gratitude
+		margin-top: 0
+	.gratitude hr
+		margin-top: 0
+	.discounts:after
+		height: 312px
+	.exchange .process__content
+		padding-left: 4.1rem;
+		padding-right: 4.1rem;
 @media only screen and (max-width : 539px)
 	.container
 		padding: 0 12px
@@ -765,9 +831,6 @@
 	.footer
 		font-size: 18px
 		line-height: 24px
-	.exchange .process__content
-		padding-left: 2.1rem
-		padding-right: 2.1rem
 	.steps .step hr.full-width,
 	.steps .step:before
 		margin-left: 0
@@ -792,6 +855,16 @@
 		justify-content: center
 	.inner .items .item__head
 		margin-bottom: 0
+	.footer .dropdown-up .dropdown-data
+		left: 0
+		right: auto
+		transform: none
+		&:after
+			left: 25%
+	.footer .dropdown._opened .dropdown-link:after
+		margin-top: 3px
+	.transcations-process
+		padding-top: 3.5rem
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 	.tape-top
@@ -841,6 +914,56 @@
 		left: 12rem
 	.transcations-process .input-exchange .input input
 		font-size: 2.2rem
+	.gratitude .img-right
+		width: 5.4rem
+		top: -4rem
+		right: 1rem
+	.gratitude .img-left
+		left: 1rem
+	.gratitude
+		margin-bottom: 5rem
+	.gratitude-text
+		margin-left: -2rem;
+		width: calc(100% + 4rem);
+	.pre-line
+		white-space: normal
+	.popup
+		max-width: 346px
+		padding: 3rem 2rem
+		.mobile-small
+			font-size: 16px
+			line-height: 20px
+			white-space: normal
+			padding: 0 4rem
+			.link
+				font-size: 16px
+				line-height: 20px
+	.popup .h2
+		font-size: 2.2rem
+		line-height: 2.9rem
+	.popup .btn-wrapper br
+		display: none
+	.popup .btn-wrapper .btn
+		width: 16rem
+		font-size: 2rem
+		line-height: 2.7rem
+		padding-right: 0
+		padding-left: 0
+		text-align: center
+		margin: 0
+	.popup-error .btn-wrapper, .popup-success .btn-wrapper
+		margin: 2.4rem auto
+		.btn
+			width: 20rem
+	.popup .popup-content
+		margin-top: 3.6rem
+	.popup .link
+		word-break: break-word
+		text-align: left
+		display: inline-block;
+		text-decoration: underline;
+		&:after
+			display: none
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 374px)

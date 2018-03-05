@@ -76,7 +76,7 @@
 								<li><a href="#">Invite Friends</a></li>
 								<li><a href="#">Další položka</a></li>
 							</ul>
-							<hr>
+							<hr class="full-width">
 							<a href="#" class="logout">Log Out</a>
 						</div>
 					</div> -->
@@ -106,118 +106,22 @@
 
 	<div class="page__content">
 
-		<div class="main inner-large">
+		<div class="main">
 			<div class="container">
 
 				<header class="content__header">
-					<div class="title title-single"><h1 class="h1">Testimonials</h1></div>
-
-					<div class="sub-title">
-                        <p class="p_large pre-line">Co o nás říkají naši spokojení zákazníci?
-                        Podívejte se na hodnocení transakcí, které nám zanechali.</p>
-                    </div>
-
-                    
-                    <div class="gratitude text-center">
-                    	<hr>
-                    	<h2 class="h2 pre-line">Více než <span class="accentColor">4,149 zákazníků</span> nám zanechalo
-                    	hodnocení <span class="accentColor">5/5 hvězd</span>. Děkujeme.</h2>
-                    </div>
+					<div class="title"><h1 class="h1">Example popup</h1></div>
 				</header>
 
-				<div class="main__wrapper">
+
 					<div class="content blank tape-top no-padding">
-
-						<div class="blank-content">
-							<div class="hard-table">
-								<table>
-									<thead>
-										<tr>
-											<th align="center">Uživatel:</th>
-											<th>Vstupní systém:</th>
-											<th>Vstupní částka:</th>
-											<th>Výstupní systém:</th>
-											<th>Výstupní částka:</th>
-											<th>ID transakce:</th>
-											<th>Hodnocení:</th>
-										</tr>
-									</thead>
-
-									<tbody>
-										<tr class="tr-default">
-											<td align="center">P*** N****** </td>
-											<td>
-												<div class="currency">
-													<div class="currency-name">Adv Cash</div>
-													<div class="currency-icons" style="background-image: url(img/adv-cash.png);"></div>
-												</div>
-											</td>
-											<td align="right">10.00 <b>USD</b></td>
-											<td>
-												<div class="currency">
-													<div class="currency-name">Bitcoin</div>
-													<div class="currency-icons" style="background-image: url(img/bitcoin.png);"></div>
-												</div>
-											</td>
-											<td align="right">0.00018 <b>BTC</b></td>
-											<td><div class="id">74deedefda69b7046d</div></td>
-											<td align="center">
-												<div class="rating">
-													<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star is-active"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star is-active"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-												</div>
-											</td>
-										</tr>
-										<tr class="tr-content">
-											<td colspan="7" class="pre-line">
-												323123
-											</td>
-										</tr>
-
-										<!-- LINE2 -->
-										<tr class="tr-default">
-											<td align="center">P*** N****** </td>
-											<td>
-												<div class="currency">
-													<div class="currency-name">Adv Cash</div>
-													<div class="currency-icons" style="background-image: url(img/adv-cash.png);"></div>
-												</div>
-											</td>
-											<td align="right">10.00 <b>USD</b></td>
-											<td>
-												<div class="currency">
-													<div class="currency-name">Bitcoin</div>
-													<div class="currency-icons" style="background-image: url(img/bitcoin.png);"></div>
-												</div>
-											</td>
-											<td align="right">0.00018 <b>BTC</b></td>
-											<td><div class="id">74deedefda69b7046d</div></td>
-											<td align="center">
-												<div class="rating">
-													<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star is-active"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-													<div class="star is-active"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
-												</div>
-											</td>
-										</tr>
-										<tr class="tr-content">
-											<td colspan="7" class="pre-line">
-												323123
-											</td>
-										</tr>
-									</tbody>
-								</table>
-
-
-
-							</div>
+						<div class="text-center">
+							<br>
+							<a class="popup-with-zoom-anim" href="#small-dialog">Popup example 1</a><br>
+							<a class="popup-with-zoom-anim" href="#medium-dialog">Popup example 2</a><br>
+							<a class="popup-with-zoom-anim" href="#popup-error">Popup example 3</a><br>
+							<br>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -283,17 +187,65 @@
 		</footer>
 	</div>
 
-
     <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
     <div id="small-dialog" class="popup blank tape-top zoom-anim-dialog mfp-hide">
         <div class="popup-title">
             <h2 class="h2 text-center">Opravdu jste částku odeslal?</h2>
         </div>
-        <div class="btn-wrapper text-center">
-            <a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Ne, neodeslal</a>
-            <a href="#" class="btn btn-accent rippler rippler-default">Ano, odeslal</a>
+
+        <div class="popup-content">
+        	<div class="btn-wrapper text-center">
+        		<a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Ne, neodeslal</a>
+        		<a href="#" class="btn btn-accent rippler rippler-default">Ano, odeslal</a>
+        	</div>
         </div>
     </div>
+
+     <div id="medium-dialog" class="popup popup-success blank tape-top zoom-anim-dialog mfp-hide">
+        <div class="popup-title">
+            <h2 class="h2 text-center">Gratulujeme! Odesláno.</h2>
+        </div>
+        <div class="popup-subtitle">
+        	<p class="p_middle mobile-small">Stav transakce můžete <b>sledovat</b> přes tento <b>odkaz</b>.</p>
+        </div>
+
+        <br>
+        <p class="p_middle mobile-small text-center">
+        	<a href="#" class="link">https://www.smartex.info/4566dasf45f8w9af46</a>
+        	<br><br>
+        	Nebo
+        	<br><br>
+        	V <a href="#" class="link">historii transakcí</a> na svém účtu.
+        </p>
+
+        <div class="btn-wrapper text-center">
+            <a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Přihlásit</a>
+            <br>
+            <a href="#" class="btn btn-accent rippler rippler-default">Nová směna</a>
+        </div>
+    </div>
+
+
+    <div id="popup-error" class="popup popup-error blank tape-top zoom-anim-dialog mfp-hide">
+        <div class="popup-title">
+            <h2 class="h2 text-center color redColor">Něco se posralo!</h2>
+        </div>
+        
+        <p class="p_middle text-center">
+        	V průběhu transakce nastala <b>neidentifikovatelná chyba</b>.
+        	<br><br>
+        	Kontaktujte prosím <a href="#" class="link">technickou podporu</a>.
+        </p>
+      
+        <div class="btn-wrapper text-center">
+        	<a href="#" class="btn btn-accent rippler rippler-default">Ok, zavrit</a>
+        </div>
+    </div>
+
+
+    
+
+   
 
 
     <script src="js/scripts.min.js"></script>
