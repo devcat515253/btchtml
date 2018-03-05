@@ -212,12 +212,6 @@ var map;
 
 	
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
 
 	/*
  * Replace all SVG images with inline SVG
