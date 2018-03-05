@@ -1,5 +1,15 @@
 $(function() {
 
+
+    $(".share .share__content .ic").click(function (e) {
+        e.preventDefault();
+        $(this).addClass('cbutton--click').delay(1000).queue(function(next){
+            $(this).removeClass('cbutton--click');
+            window.location = $(this).attr('href'); // переход по ссылке по атрибуту href
+            next();
+        });
+    });
+
     // 4. Пишем скрипт который создаст и отобразит карту Google Maps на странице.
 
 // Определяем переменную map
