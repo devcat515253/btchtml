@@ -31,6 +31,10 @@ var map;
 			icon: '../img/map-marker.svg'
 		});
 	}
+        $( document ).ready(function() {
+            initMap();
+        });
+
 	} catch(er) {}
 
 	$(".hard-table .tr-default").click(function (e) {
