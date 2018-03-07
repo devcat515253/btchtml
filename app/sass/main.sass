@@ -251,7 +251,7 @@ hr
 	line-height: 4rem
 	background-image: url('../img/svg/logout-icon.svg')
 	background-repeat: no-repeat
-	background-position: left center
+	background-position: left calc(50% + -2px)
 	background-size: contain
 	&:hover
 		color: $colorAccentOne
@@ -576,7 +576,7 @@ hr
 
 .landing-page
 	max-width: 90rem
-	margin: 0 auto
+	margin: 3rem auto 0
 	.magazine .blank-self
 		&:first-child
 			margin-top: 8.5rem
@@ -988,8 +988,10 @@ hr
 				margin-bottom: 0
 			&-title
 				margin-bottom: 2.2rem
-		.form-group.has-error + .tip-link
-			margin-top: 4rem
+		.form-group.has-error
+			margin-bottom: 1rem
+			& + .tip-link
+				margin-top: 1rem
 
 	.process__content
 		position: relative
@@ -1310,9 +1312,10 @@ hr
 								writing-mode: tb-rl;
 								transform: rotate(180deg);
 
-.discounts
+.discounts, .landing
 	&:after
-		height: 350px								
+		height: 350px		
+.discounts						
 	.content__header .sub-title
 		margin-bottom: 7.8rem
 	.main__wrapper .content
@@ -1468,6 +1471,8 @@ hr
 		margin-top: 3rem
 	.btn
 		margin-top: 3.6rem
+	.error-label
+		position: relative
 
 .tip-list
 	max-width: 25.7rem
@@ -1618,6 +1623,7 @@ hr
 			margin-right: 0
 		&.is-active
 			position: relative
+			background-color: $bgAccentOne
 			&:before
 				content: ''
 				position: absolute
@@ -1682,6 +1688,7 @@ hr
 
 	&.has-error
 		color: $errorColor
+		margin-bottom: 4rem
 		&:before, &:after
 			border-color: $errorColor
 		.error-label
@@ -1715,7 +1722,6 @@ hr
 	font-weight: bold
 	line-height: 19px
 	top: calc(100% - 1px)
-
 	&:before
 		content: ""
 		position: absolute
@@ -1743,6 +1749,7 @@ hr
 		text-transform: uppercase
 		margin-left: auto
 		flex-shrink: 0
+		margin-left: 1rem
 
 .checkbox
 	display: -webkit-flex
